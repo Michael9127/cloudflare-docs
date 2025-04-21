@@ -120,23 +120,29 @@ To connect to a Windows machine over RDP:
 
 You now have access to the remote Windows desktop.
 
-## Product compatibility
-
- <Render file="access/self-hosted-app/product-compatibility" product="cloudflare-one" />
-
-### Supported RDP Server Operating Systems
-- Windows 10 Pro
-- Windows 10 Enterprise
+## Supported RDP Server Operating Systems
 - Windows 11 Pro
+- Windows 11 Enterprise
+- Windows 10 Pro
 - Windows 10 Enterprise
 - Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server 2016
 
-### Supported Browsers
+## Supported Browsers
 - Chrome
 - Firefox
 - Brave
 - Opera
 - Microsoft Edge
+
+## Limitations
+- Cloudflare uses TLS to connect to the target RDP server, but the origin TLS certificate is not verified
+- Using a [WARP authentication](/cloudflare-one/connections/connect-devices/warp/configure-warp/warp-sessions/#configure-warp-sessions-in-access) is not supported
+- Audio over RDP is not supported today
+
+## Product compatibility
+
+ <Render file="access/self-hosted-app/product-compatibility" product="cloudflare-one" />
+
