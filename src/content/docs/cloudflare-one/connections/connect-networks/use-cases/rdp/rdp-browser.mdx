@@ -223,7 +223,6 @@ Cloudflare will not configure user identifiers on the RDP target. Any user ident
 #### Microsoft Entra ID
 
 User identifiers that are bound to Microsoft Entra ID domains must enter their username as `AzureAD\user@example.com` or `AzureAD\user`. The `AzureAD\` prefix is case-insensitive.
-
 The login flow differs slightly when using an Microsoft Entra ID-bound username:
 
 1. Enter your username in one of the formats outlined above.
@@ -242,3 +241,5 @@ The login flow differs slightly when using an Microsoft Entra ID-bound username:
 - **Clipboard size limit**: Data copied between the local machine and the browser-based RDP session may not exceed 500 KB.
 - **Clipboard controls**: Admins do not have the ability to restrict copy/paste actions between the remote machine and the user's local clipboard.
 - **File transfers**: Users cannot copy/paste files from their local machine to the remote machine and vice versa.
+- **Authenticating to Entra-joined Accounts**: Browser-based RDP does not support PKU2U authentication which is required for NLA (Network Level Authentication) with Entra-joined accounts. Connecting to Entra-joined accounts will require disabling enforcment of NLA. This setting can be found in the Control Panel "Remote Desktop Settings".
+
